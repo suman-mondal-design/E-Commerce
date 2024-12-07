@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Account Page</title>
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+
+
+
+     <div class="container1">
+        <div class="navbar">
+            <div class="logo">
+              <a href="index.html"><img src="logo1.png" alt="Brand Logo" width="300px" style="margin-left: 10px; margin-top: 40px;"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><h3><a href="index.html">Home</a></h3></li>
+                    <li><h3><a href="product.html">Product</a></h3></li>
+                    <li><h3><a href="">about</a></h3></li>
+                    <li><h3><a href="">Contact</a></h3></li>
+                    <li><h3><a href="Account.html">Account</a></h3></li>
+                </ul>
+            </nav>
+           <a href="cart.html"> <img src="cart.png" width="25px" height="25px"></a>
+            <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+    </div>
+<!------------- Account-page -------------->
+<div class="account-page">
+    <div class="container2">
+        <div class="row">
+            <div class="col-2">
+                <img src="" width="">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot password &#8594;</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--------------- footer ----------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="play-store.png">
+                    <img src="app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="logo1 black.png">
+                <p>Our Purpose is to Sustainable Make the Plasure and Benifites of Fashion Accessible to the Many</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2023-2024 By Suman Mondal. All Rights Reserved.</p>
+    </div>
+</div>
+<!------------- js for toggle menu ----------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<!--------------- js for togel from ------------->
+
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+        function register(){
+            RegForm.style.transform = "translatex(0px)";
+            LoginForm.style.transform = "translatex(0px)";
+            Indicator.style.transform = "translatex(100px)";
+        }
+        function login(){
+            RegForm.style.transform = "translatex(300px)";
+            LoginForm.style.transform = "translatex(300px)";
+            Indicator.style.transform = "translatex(0px)";
+        }
+</script>
+
+</body>
+</html>
